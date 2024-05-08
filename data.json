@@ -1,0 +1,190 @@
+[
+    {
+        "PARKING_LOT_ID": 1,
+        "NAME": "Shanti Towers",
+        "CAPACITY": 100,
+        "LEVELS": 3,
+        "FLOORS": [
+            "A",
+            "B",
+            "C"
+        ],
+        "LOCATION": "123 Main Street",
+        "PARKING_SPOTS": {
+            "A": [
+                {
+                    "SPOT_ID": "AC1",
+                    "LEVEL": 1,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "AC2",
+                    "LEVEL": 1,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "AC3",
+                    "LEVEL": 1,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "AC4",
+                    "LEVEL": 1,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "AB1",
+                    "LEVEL": 1,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "bike",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "AB2",
+                    "LEVEL": 1,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "bike",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "AT5",
+                    "LEVEL": 1,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "truck",
+                    "RESERVED_MEMBER_ID": ""
+                }
+            ],
+            "B": [
+                {
+                    "SPOT_ID": "BC1",
+                    "LEVEL": 2,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "BC2",
+                    "LEVEL": 2,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "BC3",
+                    "LEVEL": 2,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "BC4",
+                    "LEVEL": 2,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "BB1",
+                    "LEVEL": 2,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "bike",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "BB2",
+                    "LEVEL": 2,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "bike",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "BT1",
+                    "LEVEL": 2,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "truck",
+                    "RESERVED_MEMBER_ID": ""
+                }
+            ],
+            "C": [
+                {
+                    "SPOT_ID": "CC1",
+                    "LEVEL": 3,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "CC2",
+                    "LEVEL": 3,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "CC3",
+                    "LEVEL": 3,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "CC4",
+                    "LEVEL": 3,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "Car",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "CB1",
+                    "LEVEL": 3,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "bike",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "CB2",
+                    "LEVEL": 3,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "bike",
+                    "RESERVED_MEMBER_ID": ""
+                },
+                {
+                    "SPOT_ID": "CT1",
+                    "LEVEL": 3,
+                    "AVAILABLE": true,
+                    "RESERVED": false,
+                    "SPOT_TYPE": "truck",
+                    "RESERVED_MEMBER_ID": ""
+                }
+            ]
+        }
+    }
+]
