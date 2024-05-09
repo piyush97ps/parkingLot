@@ -2,24 +2,25 @@ from typing import List, Tuple
 import copy
 import json
 
-from parking_lot.dataModels.parkingSlot import ParkingSpot
-from parking_lot.dataModels.parkingFloor import ParkingFloor
-from parking_lot.dataModels.parkingLot import ParkingLot
-from parking_lot.dataModels.customDataType import ParkingSpotType
+from dataModels.parkingSlot import ParkingSpot
+from dataModels.parkingFloor import ParkingFloor
+from dataModels.parkingLot import ParkingLot
+from dataModels.customDataType import ParkingSpotType
 
 
 class ParkPlus:
 
     def __init__(self):
         """__init__."""
-        self.data = json.loads("./data.json")
+        with open("data.json") as fp:
+            self.data = json.load(fp)
         self.parkingLot = self.__loadParkingLot()
 
     def __loadParkingSpot(self, spotData: dict, parkingFloorName) -> ParkingSpot:
-        spotID = spotData["spotData_ID"]
+        spotID = spotData["SPOT_ID"]
         level = spotData["LEVEL"]
         reserved = spotData["RESERVED"]
-        spotType = spotData["spotData_TYPE"]
+        spotType = ParkingSpotType(spotData["SPOT_TYPE"].lower())
         reservedMemberID = spotData["RESERVED_MEMBER_ID"]
 
         return ParkingSpot(parkingID=spotID, spotType=spotType,
@@ -78,3 +79,8 @@ class ParkPlus:
 
 if __name__ == "__main__":
     pp = ParkPlus()
+    vehicleNumber = "MH02HW2345"
+    vehicleType = ParkingSpotType.car
+    parkingSpot, floor = pp.parkingLot.getParkingSpotAndFloor(
+        vehicleNumber, vehicleType)
+    print(parkingSpot)

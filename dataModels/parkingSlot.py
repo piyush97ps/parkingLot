@@ -1,6 +1,6 @@
 from typing import List
 
-from parking_lot.dataModels.customDataType import ParkingSpotType
+from dataModels.customDataType import ParkingSpotType
 
 
 class ParkingSpot:
@@ -39,7 +39,10 @@ class ParkingSpot:
         return self.isAlloted
 
     def __eq__(self, other) -> bool:
-        return self.name == other.name
+        return self.parkingID == other.parkingID
 
     def __hash__(self) -> int:
-        return hash(self.name)
+        return hash(self.parkingID)
+
+    def __str__(self) -> str:
+        return f"Parking spot {self.parkingID}: Floor:  {self.parkingLevel}"

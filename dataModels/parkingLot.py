@@ -1,9 +1,9 @@
 from typing import List, Tuple
 import copy
 
-from parking_lot.dataModels.parkingSlot import ParkingSpot
-from parking_lot.dataModels.parkingFloor import ParkingFloor
-from parking_lot.dataModels.customDataType import ParkingSpotType
+from dataModels.parkingSlot import ParkingSpot
+from dataModels.parkingFloor import ParkingFloor
+from dataModels.customDataType import ParkingSpotType
 
 
 class ParkingLot:

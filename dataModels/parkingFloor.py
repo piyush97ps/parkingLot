@@ -1,8 +1,8 @@
 from typing import List
 import copy
 
-from parking_lot.dataModels.parkingSlot import ParkingSpot
-from parking_lot.dataModels.customDataType import ParkingSpotType
+from dataModels.parkingSlot import ParkingSpot
+from dataModels.customDataType import ParkingSpotType
 
 
 class ParkingFloor:
@@ -11,7 +11,7 @@ class ParkingFloor:
         self.name: str = name
         self.level: int = level
         self.totalParkingSpot: int = totalParkingSpot
-        self.parkingSpots: dict[str, ParkingSpot] = {spot.name: spot for spot in parkingSpots}
+        self.parkingSpots: dict[str, ParkingSpot] = {spot.parkingID: spot for spot in parkingSpots}
         self.spotMapping: dict = self.__initSpotMap()
 
     def __initSpotMap(self) -> dict:
@@ -23,7 +23,7 @@ class ParkingFloor:
         }
         spotMappingCount = {
             ParkingSpotType.car: spotConfig,
-            ParkingSpotType.twoWheeler: copy.deepcopy(spotConfig),
+            ParkingSpotType.bike: copy.deepcopy(spotConfig),
             ParkingSpotType.truck: copy.deepcopy(spotConfig)
         }
         for spot in self.parkingSpots.values():
@@ -47,7 +47,7 @@ class ParkingFloor:
         return self.spotMapping[spotType]
 
     def assignParkingSpot(self, vehicleType: ParkingSpotType, vehicleNumber: str,
-                          reservedMemberID: str = "") -> ParkingSpot | None:
+                          reservedMemberID: str = "") -> ParkingSpot:
         """AssignParkingSpot.
         Args:
             vehicleType (ParkingSpotType): _description_
@@ -85,6 +85,8 @@ class ParkingFloor:
         selectedSpot.vehicleNumber = vehicleNumber
         selectedSpot.isAlloted = True
 
+        return selectedSpot
+
     def unassignParkingSpot(self, parkingSpotName: str, vehicleNumber) -> bool:
         """UnassignParkingSpot.
 
@@ -120,3 +122,6 @@ class ParkingFloor:
             assignedParking.add(spot)
 
         return True
+
+    def __str__(self) -> str:
+        return f"Parking Lot is: {self.spotMapping}, Floor: {self.name}, level: {self.level}"
